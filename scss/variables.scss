@@ -1,0 +1,13 @@
+$basic-font-color: #c9c9c9;
+$primary: #1e9ce6;
+$secondary: #f16b4e;
+$success: #31ac00;
+$danger: #eb0101;
+
+$app-colors: (
+    "primary",
+    $primary),
+    ("secondary", $secondary),
+    ("success", $success),
+    ("danger", $danger
+);

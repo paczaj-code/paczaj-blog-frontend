@@ -1,0 +1,13 @@
+[class*="heading"] {
+    display: flex;
+    align-items: center;
+
+    >i {
+        margin-right: 5px;
+    }
+}
+
+.section__heading {
+    margin: 0 auto;
+    max-width: 1200px;
+}
