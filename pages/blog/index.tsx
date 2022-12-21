@@ -6,6 +6,7 @@ import Section from '@/components/Section/Section';
 import ItemCard from '@/components/UI/Card/ItemCard';
 import Icon from '@/components/Icon/Icon';
 import Button from '@/components/UI/Button/Button';
+import db from '../../utils/db.json';
 
 interface CategoryTypes {
   id: number;
@@ -73,8 +74,9 @@ const Articles: React.FC<CategoriesTypes> = ({ categories }) => {
 };
 
 export async function getStaticProps({ props }: any) {
-  const res = await fetch(process.env.API + 'category/');
-  const categories = await res.json();
+  // const res = await fetch(process.env.API + 'category/');
+  // const categories = await res.json();
+  const categories = db.category;
 
   // TODO dodac obsługe błędów
   return {
