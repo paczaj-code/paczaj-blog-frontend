@@ -142,19 +142,37 @@ $datascience-color: rgb(2, 31, 54);
 }
 
 @media only screen and (min-width: 1100px) {
-    .section__heading:not(t.icon) {
-        font-size: 2rem;
-
-        >span {
-            text-shadow: 0px 0px 0 rgb(205, 205, 205), 0px 1px 0 rgb(167, 167, 167),
-                0px 2px 0 rgb(130, 130, 130), 0px 3px 0 rgb(93, 93, 93),
-                0px 4px 0 rgb(55, 55, 55), 0px 5px 0 rgb(18, 18, 18),
-                // 0px 6px 0 rgb(-19, -19, -19), 0px 7px 6px rgba(0, 0, 0, 0.3),
-                0px 7px 1px rgba(0, 0, 0, 0.5),
-                0px 0px 6px rgba(0, 0, 0, 0.2);
-        }
+    
+ 
+    .section__heading {
+         font-size: 2rem;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+       > i.icon  {
+           font-size:3rem;
+        // color: adjust-hue($secondary, -120deg) !important;
+        color:#0f0f0f;
     }
-
+    
+     > span {
+       
+        
+            // text-shadow: 0px 0px 0 rgb(205, 205, 205), 0px 1px 0 rgb(167, 167, 167),
+            //     0px 2px 0 rgb(130, 130, 130), 0px 3px 0 rgb(93, 93, 93),
+            //     0px 4px 0 rgb(55, 55, 55), 0px 5px 0 rgb(18, 18, 18),
+            //     // 0px 6px 0 rgb(-19, -19, -19), 0px 7px 6px rgba(0, 0, 0, 0.3),
+            //     0px 7px 1px rgba(0, 0, 0, 0.5),
+            //     0px 0px 6px rgba(0, 0, 0, 0.2);
+    // background: linear-gradient(to left, white , darken($secondary,4%) );
+     background: linear-gradient(to right, lighten(#6b4ef1 ,0%), darken(#6b4ef1 ,0%));
+    //  background: -webkit-linear-gradient(#eee, #333);
+    
+  /* Mask the color to the text, and remove the rest  */
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: transparent;
+        
+    }
+    }
     .category__description {
         display: inline-block;
         max-width: 400px;
