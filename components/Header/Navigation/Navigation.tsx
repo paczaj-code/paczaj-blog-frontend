@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import SubMenu from './SubMenu'
 interface MenuItem {
   name: string;
   target: string;
@@ -43,7 +43,10 @@ const Navigation = ({
           return (
             <li className="menu__item" key={index}>
               {Boolean(menuItem.subMenu) ? (
+                <>
                 <p>{menuItem.name}</p>
+                <SubMenu subMenu={menuItem.subMenu} />
+                </>
               ) : (
                 <Link
                   href={menuItem.target}
