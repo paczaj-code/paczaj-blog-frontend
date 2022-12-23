@@ -48,8 +48,9 @@ const Articles: React.FC<CategoriesTypes> = ({ categories }) => {
             dangerouslySetInnerHTML={{ __html: category.description! }}
           ></div>
           {category.subcategories.length &&
-            category.subcategories.map((subcategory) => (
+            category.subcategories.map((subcategory, index) => (
               <ItemCard
+                key={index}
                 itemCard_prefix="category"
                 itemCard_modifier={subcategory.slug}
                 onClick={() => router.push(`/blog/${subcategory.slug}`)}
