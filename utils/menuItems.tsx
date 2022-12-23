@@ -1,28 +1,66 @@
+interface MenuItemTypes {
+  name: string;
+  target: string;
+  icon?: string;
+}
+
+export interface MenuTypes extends MenuItemTypes {
+  subMenu?: { name: string; icon?: string; subMenuItems: MenuItemTypes[] };
+}
+
 export const menuItems = [
   {
     name: 'Blog',
     target: '/blog',
+    icon: undefined,
     subMenu: [
       {
         name: 'Bazy danych',
+        icon: 'icon-data',
         subMenuItems: [
-          { name: 'SQL', target: '/sql' },
-          { name: 'MongoDB', target: '/mongodb' },
+          {
+            name: 'SQL',
+            target: '/sql',
+            icon: 'icon-microsoftsqlserver',
+          },
+          { name: 'MongoDB', target: '/mongodb', icon: 'icon-mongodb' },
         ],
       },
       {
         name: 'DataScience',
+        icon: 'icon-linegraph',
         subMenuItems: [
-          { name: 'Pandas', target: '/pandas' },
-          { name: 'NumPy', target: '/numpy' },
-          { name: 'Ggplot', target: '/ggplot' },
+          { name: 'Pandas', target: '/pandas', icon: 'icon-pandas' },
+          { name: 'NumPy', target: '/numpy', icon: 'icon-numpy' },
         ],
       },
     ],
   },
-  { name: 'Ćwiczenia', target: '/exercises' },
-  { name: 'Słowniczek', target: '/glossary' },
-  { name: 'O mnie', target: '/about' },
+  {
+    name: 'Ćwiczenia',
+    target: '/exercises',
+    icon: undefined,
+    subMenu: [
+      {
+        name: 'Bazy danych',
+        icon: 'icon-data',
+        subMenuItems: [
+          { name: 'SQL', target: '/sql', icon: 'icon-microsoftsqlserver' },
+          { name: 'MongoDB', target: '/mongodb', icon: 'icon-mongodb' },
+        ],
+      },
+      {
+        name: 'DataScience',
+        icon: 'icon-linegraph',
+        subMenuItems: [
+          { name: 'Pandas', target: '/pandas', icon: 'icon-pandas' },
+          { name: 'NumPy', target: '/numpy', icon: 'icon-numpy' },
+        ],
+      },
+    ],
+  },
+  { name: 'Glosariusz', target: '/glossary', icon: undefined },
+  { name: 'O mnie', target: '/about', icon: undefined },
 ];
 
 // "subcategories": [
