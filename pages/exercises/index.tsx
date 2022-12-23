@@ -1,5 +1,5 @@
 const Exersices = () => {
-  return <div>indeqerfqwefwefx</div>;
+  return <div>dupa</div>;
 };
 
 export default Exersices;
