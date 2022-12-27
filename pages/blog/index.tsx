@@ -7,6 +7,8 @@ import ItemCard from '@/components/UI/Card/ItemCard';
 import Icon from '@/components/Icon/Icon';
 import Button from '@/components/UI/Button/Button';
 import db from '../../utils/db.json';
+import Image from 'next/image';
+import Heading from '@/components/UI/Heading/Heading';
 
 interface CategoryTypes {
   id: number;
@@ -28,25 +30,43 @@ const Articles: React.FC<CategoriesTypes> = ({ categories }) => {
   return (
     <MainLayout layout_prefix="blog">
       {categories.map((category, index) => (
+        // <span></span>
+
         <Section
           key={category.id}
           section_prefix="category"
+          section_modifier={category.slug}
           section_extra_classes={['fade-in-top']}
-          section_heading_label={category.name}
-          section_heading_icon={category.icon}
+          // section_heading_label={category.name}
+          // section_heading_icon={category.icon}
           // style={{animationDelay:}}
           seection_style={{ animationDelay: `${50 * index}ms` }}
         >
+          {/* <Image
+            // loader={myLoader}
+            src={require('../../public/images/557-2.jpg')}
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          /> */}
+          <div className="section__wrapper">
+            <div className={`section__image--${category.slug}`}></div>
+            <div className="section__description">
+              <Heading headingLevel="h3" heading_label={category.name} />
+              <p>{category.description}</p>
+            </div>
+          </div>
+
           {/* <Heading
             headingLevel="h1"
             heading_label={category.name}
             heading_prefix="category"
             heading_icon={category.icon ? category.icon : undefined}
           /> */}
-          <div
+          {/* <div
             className="category__description"
             dangerouslySetInnerHTML={{ __html: category.description! }}
-          ></div>
+          ></div> */}
           {category.subcategories.length &&
             category.subcategories.map((subcategory, index) => (
               <ItemCard
@@ -75,9 +95,9 @@ const Articles: React.FC<CategoriesTypes> = ({ categories }) => {
 };
 
 export async function getStaticProps({ props }: any) {
-  // const res = await fetch(process.env.API + 'category/');
-  // const categories = await res.json();
-  const categories = db.category;
+  const res = await fetch(process.env.API + 'category/');
+  const categories = await res.json();
+  // const categories = db.category;
 
   // TODO dodac obsługe błędów
   return {
