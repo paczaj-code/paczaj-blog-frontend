@@ -1,12 +1,12 @@
 @font-face {
   font-family: "icomoon";
-  src        : url("../../public/fonts/icomoon.eot?hn7yua");
-  src        : url("../../public/fonts/icomoon.eot?hn7yua#iefix") format("embedded-opentype"),
+  src: url("../../public/fonts/icomoon.eot?hn7yua");
+  src: url("../../public/fonts/icomoon.eot?hn7yua#iefix") format("embedded-opentype"),
     url("../../public/fonts/icomoon.ttf?hn7yua") format("truetype"),
     url("../../public/fonts/icomoon.woff?hn7yua") format("woff"),
     url("../../public/fonts/icomoon.svg?hn7yua#icomoon") format("svg");
-  font-weight : normal;
-  font-style  : normal;
+  font-weight: normal;
+  font-style: normal;
   font-display: block;
 }
 
@@ -15,16 +15,16 @@
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family   : 'icomoon' !important;
-  speak         : never;
-  font-style    : normal;
-  font-weight   : normal;
-  font-variant  : normal;
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
   text-transform: none;
-  line-height   : 1;
+  line-height: 1;
 
   /* Better Font Rendering =========== */
-  -webkit-font-smoothing : antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -174,7 +174,7 @@
 
 .icon-css3-color:before {
   content: "\e90e";
-  color  : #1572b6;
+  color: #1572b6;
 }
 
 .icon-pandas:before {
@@ -183,7 +183,7 @@
 
 .icon-pandas-color:before {
   content: "\e910";
-  color  : #150458;
+  color: #150458;
 }
 
 .icon-numpy:before {
@@ -200,7 +200,7 @@
 
 .icon-git-color:before {
   content: "\e903";
-  color  : #f05032;
+  color: #f05032;
 }
 
 .icon-microsoftsqlserver:before {
@@ -209,7 +209,7 @@
 
 .icon-microsoftsqlserver-color:before {
   content: "\e905";
-  color  : #cc2927;
+  color: #cc2927;
 }
 
 .icon-postgresql:before {
@@ -218,7 +218,7 @@
 
 .icon-postgresql-color:before {
   content: "\e907";
-  color  : #4169e1;
+  color: #4169e1;
 }
 
 .icon-sqlite:before {
@@ -227,7 +227,7 @@
 
 .icon-sqlite-color:before {
   content: "\e909";
-  color  : #003b57;
+  color: #003b57;
 }
 
 .icon-mysql:before {
@@ -236,17 +236,17 @@
 
 .icon-mysql-color:before {
   content: "\e90b";
-  color  : #4479a1;
+  color: #4479a1;
 }
 
 .icon-mongodb:before {
   content: "\e915";
-  color  : #47a248;
+  // color  : #47a248;
 }
 
 .icon-postgresql1:before {
   content: "\e90d";
-  color  : #336791;
+  color: #336791;
 }
 
 .icon-database:before {

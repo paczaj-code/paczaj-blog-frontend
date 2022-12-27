@@ -1,13 +1,21 @@
 @import "../variables.scss";
 
+$some: hsla(251, 85%, 8%, 0.768);
+
 .app__header {
+    // margin-top: 5px;
     height: 60px;
-    background: linear-gradient(rgba(2, 2, 2, 0.362), rgba(0, 2, 2, 0.262));
-    box-shadow: 0 0px 15px -4px black inset;
+    margin-bottom: 20px;
+    border-bottom: inset 1px hsl(243, 38%, 20%);
+    // border-top: inset 1px hsl(243, 42%, 30%);
+    background: linear-gradient(hsla(0, 0%, 0%, 0.151), hsla(0, 0%, 0%, 0.404));
+    backdrop-filter: blur(4px);
+    box-shadow: 0 -5px 45px 0px #15132a inset, 0 3px 7px hsla(0, 0%, 0%, 0.719);
+
 }
 
 .header__content {
-    max-width: 1200px;
+    // max-width: 1200px;
     position: relative;
     margin: 0 auto;
     height: 100%;
@@ -18,18 +26,6 @@
 
 .logo {
     cursor: pointer;
-    // font-family: 'Ubuntu Condensed';
-    // text-shadow: 1px 1px 10px rgba(26, 26, 26, 0.644);
-    // font-size: 1.6rem;
-    // background: hsla(217, 100%, 50%, 1);
-    // background: linear-gradient(-180deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    // background-size: 100%;
-    // background-repeat: repeat;
-    // -webkit-background-clip: text;
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // -moz-background-clip: text;
-    // -moz-text-fill-color: transparent;
     // TODO popracować nad logo
 }
 
@@ -57,13 +53,13 @@
 
 }
 
-@media only screen and (min-width: 1200px) {
-    .header__content {
-        justify-content: center
-    }
+// @media only screen and (min-width: 1200px) {
+//     .header__content {
+//         justify-content: center
+//     }
 
-    .logo {
-        position: absolute;
-        left: 0;
-    }
-}
+//     .logo {
+//         position: absolute;
+//         left: 0;
+//     }
+// }
