@@ -160,6 +160,7 @@ $some: hsla(251, 85%, 8%, 0.768);
         position: absolute;
         display: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
         // z-index: 200;
 
         >.submenu__content {
@@ -173,12 +174,21 @@ $some: hsla(251, 85%, 8%, 0.768);
         
 
         >.submenu__content {
+=======
+        z-index: 200;
+        
+
+        >.submenu__content {
+>>>>>>> 0306c5c1c31d0d59dfcacc81955f80d80e658aa7
             border-radius: 8px;
             // background: rgba(134, 134, 134, 0.953);
             // background: linear-gradient(to top,darken($some,0%), lighten($some,9%));
             background:$some;
             box-shadow: 0 0px 18px -3px black, 0 0 150px rgba(42,42,40,.5) inset ;
             border: solid rgba(130,130,130,0.5) 1px;
+<<<<<<< HEAD
+>>>>>>> 0306c5c1c31d0d59dfcacc81955f80d80e658aa7
+=======
 >>>>>>> 0306c5c1c31d0d59dfcacc81955f80d80e658aa7
 
             .subitems__title {
@@ -199,6 +209,7 @@ $some: hsla(251, 85%, 8%, 0.768);
 
     .submenu__wrapper.show {
 <<<<<<< HEAD
+<<<<<<< HEAD
         // position: relative;
         padding-top: 10px;
         left: -110px;
@@ -208,6 +219,8 @@ $some: hsla(251, 85%, 8%, 0.768);
         display: block;
         // z-index: 10000;
 =======
+=======
+>>>>>>> 0306c5c1c31d0d59dfcacc81955f80d80e658aa7
         
         padding-top: 10px;
         left: -110px;
@@ -216,6 +229,9 @@ $some: hsla(251, 85%, 8%, 0.768);
         animation-delay: 200ms;
         display: block;
         
+<<<<<<< HEAD
+>>>>>>> 0306c5c1c31d0d59dfcacc81955f80d80e658aa7
+=======
 >>>>>>> 0306c5c1c31d0d59dfcacc81955f80d80e658aa7
 
         >.submenu__content {
