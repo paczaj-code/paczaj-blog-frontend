@@ -1,5 +1,5 @@
 @import '../variables';
-
+$some: hsla(251, 85%, 8%, 0.768);
 [class^='menu__link'] {
     font-size: 1.1rem;
     color: $basic-font-color;
@@ -159,6 +159,7 @@
     .submenu__wrapper {
         position: absolute;
         display: none;
+<<<<<<< HEAD
         // z-index: 200;
 
         >.submenu__content {
@@ -167,6 +168,18 @@
             box-shadow: 0 0 10px rgb(31, 31, 31) inset, 0 2px 10px -3px black;
             backdrop-filter: blur(5px);
             position: relative;
+=======
+        z-index: 200;
+        
+
+        >.submenu__content {
+            border-radius: 8px;
+            // background: rgba(134, 134, 134, 0.953);
+            // background: linear-gradient(to top,darken($some,0%), lighten($some,9%));
+            background:$some;
+            box-shadow: 0 0px 18px -3px black, 0 0 150px rgba(42,42,40,.5) inset ;
+            border: solid rgba(130,130,130,0.5) 1px;
+>>>>>>> 0306c5c1c31d0d59dfcacc81955f80d80e658aa7
 
             .subitems__title {
                 font-size: 1rem;
@@ -185,6 +198,7 @@
     }
 
     .submenu__wrapper.show {
+<<<<<<< HEAD
         // position: relative;
         padding-top: 10px;
         left: -110px;
@@ -193,6 +207,16 @@
         // animation-delay: 300ms;
         display: block;
         // z-index: 10000;
+=======
+        
+        padding-top: 10px;
+        left: -110px;
+        -webkit-animation: slide-in-top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: slide-in-top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation-delay: 200ms;
+        display: block;
+        
+>>>>>>> 0306c5c1c31d0d59dfcacc81955f80d80e658aa7
 
         >.submenu__content {
             position: relative;
@@ -200,225 +224,52 @@
             display: flex;
             gap: 20px;
             padding: 10px 20px;
+            position:relative;
+            z-index:1000;
 
-            >div {
+            >.subitems__wrapper {
                 min-width: 150px;
                 flex: 1;
+                
+                >.subitems__title {
+                    color:darken($basic-font-color,30%);
+                    font-size:0.9rem;
+                                    }
+                .submenu__item {
+            padding: 7px 0;
+            border-bottom: solid 1px hsla(0, 0%, 23%, 0.795);
+        }
+
+        [class^='submenu__link'] {
+
+            color: $basic-font-color;
+            font-size: 1.1rem;
+
+            >i {
+                margin-right: 4px;
+            }
+
+            &:hover:not(.submenu__link--active) {
+                >i {
+                    color: $primary;
+                    transition: color 0.2s linear;
+                }
+            }
+        }
+
+        .submenu__link--active {
+
+            >i {
+                color: $secondary;
+            }
+        }
             }
         }
     }
 
 }
 
-// @media only screen and (min-width: 640px) {
-//     .submenu__wrapper {
-//         display: block;
 
-//     }
-
-//     .menu__link {
-//         color: red;
-//     }
-// }
-
-//     #main__menu {
-// @media only screen and (max-width: 599px) {
-
-//     .submenu__wrapper {
-//         display: none;
-//     }
-// }
-
-// .menu__list {
-//     display: flex;
-//     flex-direction: column;
-//     list-style: none;
-//     gap: 10px;
-//     padding: 30px 20px;
-
-//     >.menu__item {
-//         position: relative;
-//     }
-// }
-
-// [class^='menu__link'] {
-//     position: relative;
-//     text-decoration: none;
-//     color: $basic-font-color;
-//     text-shadow: 1px 1px 2px black;
-//     font-family: 'Rubik', sans-serif;
-//     font-size: 1.1rem;
-// }
-
-// .submenu__wrapper {
-//     position: absolute;
-//     display: none;
-//     z-index: 200;
-//     // left: -150%;
-
-//     >.submenu__content {
-//         border-radius: 10px;
-//         background: rgba(34, 34, 34, 0.753);
-//         box-shadow: 0 0 10px rgb(31, 31, 31) inset, 0 2px 10px -3px black;
-
-//         .subitems__title {
-//             font-size: 1rem;
-//             display: flex;
-//             color: darken($basic-font-color, 35%);
-//             border-bottom: solid 1px hsla(0, 0%, 23%, 0.795);
-//             text-shadow: 1px 1px 2px black;
-//             margin-bottom: 5px;
-
-//             >i {
-//                 margin-right: 3px;
-//             }
-//         }
-
-//         .submenu__item {
-//             padding: 7px 0;
-//             border-bottom: solid 1px hsla(0, 0%, 23%, 0.795);
-//         }
-
-//         [class^='submenu__link'] {
-
-//             color: $basic-font-color;
-//             font-size: 1.1rem;
-
-//             >i {
-//                 margin-right: 4px;
-//             }
-
-//             &:hover:not(.submenu__link--active) {
-//                 >i {
-//                     color: $primary;
-//                     transition: color 0.2s linear;
-//                 }
-//             }
-//         }
-
-//         .submenu__link--active {
-
-//             >i {
-//                 color: $secondary;
-//             }
-//         }
-//     }
-// }
-
-//     .menu__list {
-//         padding: 0;
-//         flex-direction: row;
-//         gap: 5px;
-//     }
-
-//     .submenu__wrapper {
-//         display: none;
-//     }
-
-//     .submenu__wrapper.show {
-//         padding-top: 10px;
-//         -webkit-animation: slide-in-top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-//         animation: slide-in-top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-//         animation-delay: 300ms;
-//         display: block;
-
-//         >.submenu__content {
-//             display: flex;
-//             gap: 20px;
-//             padding: 10px 20px;
-
-//             >div {
-//                 min-width: 150px;
-//                 flex: 1;
-//             }
-//         }
-//     }
-
-//     [class^='menu__link'] {
-//         position: relative;
-//         text-decoration: none;
-//         color: $basic-font-color;
-//         text-shadow: 1px 1px 2px black;
-//         font-family: 'Rubik', sans-serif;
-//         font-size: 1.1rem;
-
-//         &::before,
-//         &::after {
-//             font-size: 1.4rem;
-//             font-weight: bold;
-//             font-family: 'Ubuntu Condensed';
-//             color: darken($secondary, 8%);
-//             opacity: 0;
-//             display: inline-block;
-
-//             transition: all 0.3s linear;
-//         }
-
-//         &::before {
-//             content: '{...';
-//             transform: translateX(10px);
-//         }
-
-//         &::after {
-//             content: '}';
-//             transform: translateX(-5px);
-//         }
-
-//         &:hover {
-//             &::after {
-//                 opacity: 1;
-//                 transform: translateX(0px);
-//             }
-
-//             &::before {
-//                 opacity: 1;
-//                 transform: translateX(0px);
-//             }
-//         }
-//     }
-
-//     .menu__link--active {
-
-//         &::before,
-//         &::after {
-//             color: darken($primary, 10%);
-//             opacity: 1;
-//             display: inline-block;
-//         }
-
-//         &::before {
-//             content: '{...';
-//             transform: translateX(0px);
-//         }
-
-//         &::after {
-//             content: '}';
-//             transform: translateX(0px);
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: 800px) {
-//     .menu__list {
-//         flex-direction: row;
-//         gap: 10px;
-//     }
-// }
-
-// .menu_item {
-//     position: relative;
-// }
-
-// .submenu__container {
-//     position: absolute;
-//     max-height: 0;
-//     display: none;
-// }
-
-// .menu__link:hover+.submenu__container,
-// .submenu__container:hover {
-//     display: block;
-// }
 
 // /* ----------------------------------------------
 //  * Generated by Animista on 2022-12-23 10:42:42
@@ -434,8 +285,8 @@
 //  */
 @-webkit-keyframes slide-in-top {
     0% {
-        -webkit-transform: translateY(-20px);
-        transform: translateY(-20px);
+        -webkit-transform: translateY(-7px);
+        transform: translateY(-7px);
         opacity: 0;
     }
 
@@ -449,8 +300,8 @@
 
 @keyframes slide-in-top {
     0% {
-        -webkit-transform: translateY(-20px);
-        transform: translateY(-20px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
         opacity: 0;
     }
 
