@@ -95,9 +95,9 @@ const Articles: React.FC<CategoriesTypes> = ({ categories }) => {
 };
 
 export async function getStaticProps({ props }: any) {
-  const res = await fetch(process.env.API + 'category/');
-  const categories = await res.json();
-  // const categories = db.category;
+  // const res = await fetch(process.env.API + 'category/');
+  // const categories = await res.json();
+  const categories = db.category;
 
   // TODO dodac obsługe błędów
   return {

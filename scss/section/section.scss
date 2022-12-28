@@ -1,5 +1,7 @@
 @import '../variables.scss';
 
+[class^="category__section"]{z-index:-1; position:relative}
+
 [class^='section__image'] {
     width: 200px;
     height: 200px;
