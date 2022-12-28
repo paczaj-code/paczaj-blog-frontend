@@ -185,6 +185,8 @@ body {
   .fade-in-top {
     -webkit-animation: fade-in-top 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in-top 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    position: relative;
+    z-index: 0;
   }
 }
 
@@ -205,12 +207,14 @@ body {
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
     opacity: 0;
+
   }
 
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
+    z-index: 2;
   }
 }
 
@@ -225,6 +229,7 @@ body {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
+    z-index: 2;
   }
 }
 
