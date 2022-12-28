@@ -21,9 +21,9 @@ const SubMenu = ({
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: any, { shallow }: any) => {
-      setTimeout(() => {
+      // setTimeout(() => {
         setShowSubmenu(undefined);
-      }, 400);
+    
     };
 
     router.events.on('routeChangeStart', handleRouteChange);

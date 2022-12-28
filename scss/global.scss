@@ -202,8 +202,8 @@ body {
  */
 @-webkit-keyframes fade-in-top {
   0% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
     opacity: 0;
   }
 
@@ -216,8 +216,8 @@ body {
 
 @keyframes fade-in-top {
   0% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     opacity: 0;
   }
 
